@@ -3,7 +3,7 @@ import profile from "../images/profile.png";
 import Skills from "./Skills";
 import Project from "./Project";
 import About from "./About";
-import Resume from "./Resume";
+// import Resume from "./Resume";
 
 const Home = () => {
     return (
@@ -15,7 +15,7 @@ const Home = () => {
                 </div>
             </section>
             <About />
-            <Resume />
+            {/* <Resume /> */}
             <Skills />
             <Project />
         </>
