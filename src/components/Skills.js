@@ -10,7 +10,7 @@ const Skills = () => {
                         <p>I have meticulously cultivated a diverse array of skills throughout my journey, encompassing a wide spectrum of technologies and domains. My proficiency extends to Node.js, Express.js, C++, React.js, HTML, CSS, MongoDB, MySQL, and Bootstrap, all of which empower me to craft dynamic and robust solutions. Beyond these technical facets, I possess a keen aptitude for data structures and algorithms, which enables me to tackle complex challenges with finesse. In essence, I am not just a developer; I am a problem solver, armed with a versatile toolkit to innovate and overcome obstacles in the ever-evolving landscape of technology.</p>
                     </div>
                     <div className="row skills-content">
-                        <div className="col-lg-6 aos-init aos-animate" data-aos="fade-up">
+                        <div className="col-lg-6 aos-init aos-animate tracking-in-expand" data-aos="fade-up">
 
                             <div className="progress">
                                 <span className="skill">HTML <i className="val">100%</i></span>
@@ -47,7 +47,7 @@ const Skills = () => {
                             </div>
                         </div>
 
-                        <div className="col-lg-6 aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+                        <div className="col-lg-6 aos-init aos-animate tracking-in-expand" data-aos="fade-up" data-aos-delay="100">
                             <div className="progress">
                                 <span className="skill">Node Js <i className="val">70%</i></span>
                                 <div className="progress-bar-wrap">

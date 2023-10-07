@@ -54,7 +54,6 @@ const Navbar = () => {
                             <ul>
                                 <li><NavLink to="/" className="nav-link  active"><FontAwesomeIcon icon={faHouse} />&nbsp;&nbsp;<span>Home</span></NavLink></li>
                                 <li><NavLink to="/about" className="nav-link"><FontAwesomeIcon icon={faAddressCard} />&nbsp;&nbsp;<span>About</span></NavLink></li>
-                                {/* <li><NavLink to="/resume" className="nav-link"><FontAwesomeIcon icon={faFile} />&nbsp;&nbsp;<span>Resume</span></NavLink></li> */}
                                 <li><a href="https://drive.google.com/file/d/18wEZAwgopzbGR1UWB4G5WvVkbSyEZkj4/view?usp=drive_link" className="nav-link" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faFile} />&nbsp;&nbsp;<span>Resume</span></a></li>
                                 <li><NavLink to="/skills" className="nav-link"><FontAwesomeIcon icon={faChartSimple} />&nbsp;&nbsp;<span>Skills</span></NavLink></li>
                                 <li><NavLink to="/project" className="nav-link"><FontAwesomeIcon icon={faDiagramProject} />&nbsp;&nbsp;<span>Project</span></NavLink></li>
@@ -68,6 +67,7 @@ const Navbar = () => {
                 <FontAwesomeIcon
                     icon={isToggleIcon ? faTimes : faList}
                     className="bi bi-list mobile-nav-toggle d-xl-none w-list"
+                    style={{width: "20px", height:"20px", padding:"6px"}}
                     onClick={toggleHeader}
                 />
             )}

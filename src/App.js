@@ -8,11 +8,8 @@
 
   const App = () => {
     return (
-      <div className="row">
-        <div className="col-3 nav-bg">
+      <div className="mg-300">
           <Navbar />
-        </div>
-        <div className="col-9">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
@@ -20,8 +17,6 @@
             <Route path="/skills" element={<Skills />} />
           </Routes>
         </div>
-
-      </div>
     )
   }
 

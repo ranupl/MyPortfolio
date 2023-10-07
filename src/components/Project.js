@@ -1,97 +1,105 @@
-import React from "react";
+import React, { useState } from "react";
+import { useSearchParams } from "react-router-dom";
 
 const Project = () => {
+    const [progress, setProgress] = useState(false);
+    const [todo, setTodo] = useState(false);
+
+    const handleProgress = () => {
+        setProgress(true);
+        setTodo(false);
+    };
+
+    const handleTodo = () => {
+        setTodo(true);
+        setProgress(false);
+    };
+
     return (
         <>
             <section id="skills" className="skills section-bg mt-5">
                 <div className="container">
-                    <div className="section-title">
-                        <h3 className="text-warning">Project 1: Progress Pulse</h3>
-                        <h5>Overview:</h5>
-                        <p>Progress Pulse is a comprehensive company management application designed to streamline and enhance the workflow and communication within an organization. This versatile platform accommodates multiple user roles, including Admin, Manager, HR, and Employee, each with specific functionalities tailored to their responsibilities. Progress Pulse empowers companies to efficiently manage employee work details, facilitate communication, and ensure a seamless working environment.</p>
-                        <h5>User Roles:</h5>
-                        <h6 className="text-primary">Admin:</h6>
-                        <p>Admin holds the highest authority in the system.
-                            Can access and oversee all functionalities and data within the application.
-                            Responsible for maintaining the integrity and security of the platform.
-                            Has the ability to add, modify, or remove users.</p>
-                        <h6 className="text-primary"> Manager:</h6>
-                        <p>Managers play a pivotal role in team management and work supervision.
-                            Can create and manage teams by adding or removing team members.
-                            Access to employee updates and the ability to approve or reject leave requests.
-                            Monitors and tracks the progress of team members' work.</p>
-                        <h6 className="text-primary">  HR (Human Resources):</h6>
-                        <p> HR personnel can efficiently manage employee records.
-                            Has the authority to add new members to the company.
-                            Can oversee and assist with onboarding processes.</p>
-                        <h6 className="text-primary"> Employee:</h6>
-                        <p> Employees can use Progress Pulse to document their work updates.
-                            Can access their previous updates to review their work history.
-                            Submit leave requests for manager approval.
-                            Collaborate with colleagues and supervisors.</p>
-                        <h5>Key Features:</h5>
-                        <p><span className="text-primary">Work Updates:</span> Employees can create and share updates on their work progress, fostering transparency and accountability.</p>
-                        <p><sapn className="text-primary">Leave Management:</sapn> Managers can review and approve/reject leave requests from employees, ensuring efficient workforce management.</p>
-                        <p><span className="text-primary">Team Management:</span>Managers have the capability to build and manage teams, assigning tasks and monitoring performance.</p>
-                        <p><span className="text-primary">User Onboarding:</span>HR personnel can easily onboard new employees by adding them to the system.</p>
-                        <p><span className="text-primary">Comprehensive Admin Dashboard:</span>Admins have access to a central dashboard displaying all system data and functionalities.</p>
-                        <h4> Benefits:</h4>
-                        <p><span className="text-primary">Enhanced Productivity:</span>Progress Pulse facilitates effective communication and collaboration, leading to increased productivity.</p>
-                        <p><span className="text-primary">Streamlined Workflow:</span>The platform simplifies workflow management, from work updates to leave requests.
-                            Data Security: Admins ensure data security and oversee the platform's integrity.</p>
-                        <p>
-                            <span className="text-primary">Efficient HR Operations:</span>HR personnel can efficiently handle employee onboarding and records.
-                            Team Collaboration: Teams can collaborate seamlessly, enhancing overall efficiency.</p>
-                        <p className="text-warning">
-                            Progress Pulse is the ideal solution for companies seeking a user-friendly, multi-role application to optimize their operations, improve communication, and boost productivity. With its diverse functionalities, it caters to the specific needs of each user role, making it an invaluable asset in modern workplace management.</p>
+                    <div className="d-flex justify-content-around mb-5">
+                        <div className="col">
+                            <div className="text-center card-style scale-up-center" onClick={handleProgress}>
+                                <h1 className="fontHeading">Progress Pulse</h1>
+                                <p className="text-white font">Full Stack Application</p>
+                                <p className="text-white font">Company collaboration and team management</p>
+                                <p className="pb-5 text-white font">(Built with React.js, Node.js, and MySQL.)</p>
+                            </div>
+                        </div>
+                        <div className="col">
+                            <div className="text-center card-style scale-up-center" onClick={handleTodo}>
+                                <h1 className="fontHeading">Todo Application</h1>
+                                <p className="text-white font">Full Stack Application</p>
+                                <p className="text-white font">Track and manage your tasks with ease.</p>
+                                <p className="pb-5 text-white font">(Built with HTML, CSS, Node.js, and MongoDB.)</p>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </section>
-            <section id="skills" className="skills section-bg mt-5">
-                <div className="container">
-                    <div className="section-title">
-                        <h5>Overview:</h5>
-                        <p>The Todo Application is a multi-user task management platform that empowers users to efficiently organize their tasks while providing administrators with comprehensive control over user management and task assignments. Developed using HTML, CSS, MongoDB, Node.js, and Express.js, this application offers a wide range of features to enhance task management and collaboration.</p>
-                        <h3 className="text-warning">Project 2: Todo Application</h3>
-                        <h5>User Registration and Authentication:</h5>
-                        <p>Users can sign up and log in using Google authentication for a seamless and secure experience.</p>
-                        <h5>Task Management:</h5>
-                        <ul>
-                            <li>Users can create, modify, delete, and mark tasks as completed or pending.</li>
-                            <li>Prioritize tasks by assigning different priority levels.</li>
-                            <li>Filter tasks based on priority and status (completed or pending).</li>
-                            <li>Implement pagination for efficient task navigation.</li>
-                            <li>
-                                Search tasks by task names for quick retrieval.
-                            </li>
-                        </ul>
-                        <h5>Admin Functionalities:</h5>
-                        <h6 className="text-primary"> User Management:</h6>
-                        <ul>
-                            <li>Admin can view a list of all registered users.</li>
-                            <li>Assign tasks to users, facilitating efficient task distribution.</li>
-                            <li>Modify user details and delete user accounts as needed.</li>
-                        </ul>
-                        <h6 className="text-primary"> Task Management:</h6>
-                        <ul>
-                            <li>Admin has access to all tasks across the application.</li>
-                            <li>Assign tasks to specific users, ensuring accountability.</li>
-                            <li>Modify or delete tasks to maintain task accuracy and relevance.</li>
-                        </ul>
-                        <h5>Key Features:</h5>
-                        <p><span className="text-primary">User-Friendly Interface: </span> The application offers an intuitive and user-friendly interface for seamless task management.</p>
-                        <p><sapn className="text-primary">Google Authentication: </sapn>  Enhanced security through Google authentication for user registration and login.</p>
-                        <p><span className="text-primary">Task Customization: </span>Users can prioritize tasks, filter by status and priority, and perform various task-related actions.</p>
-                        <p><span className="text-primary">Efficient Search: </span>Quick task retrieval using task names for better organization.</p>
-                        <p><span className="text-primary">Admin Control:</span>Administrators have comprehensive control over user and task management.</p>
-                        <h4> Benefits:</h4>
-                        <p><span className="text-primary">Enhanced Productivity:</span>Users can efficiently manage and organize their tasks, improving overall productivity.</p>
-                        <p><span className="text-primary">Secure Authentication:</span>Google authentication ensures user data security.</p>
-                        <p>
-                            <span className="text-primary">Streamlined Task Management: </span>The application simplifies task tracking and modification..</p>
-                        <p className="text-warning">
-                            The Todo Application serves as a powerful tool for individuals and teams seeking an organized and efficient way to manage tasks. With its intuitive design and robust functionality, it provides a seamless task management experience, while administrators can maintain control over user accounts and task assignments for enhanced collaboration and productivity.</p>
-                    </div>
+
+                    {progress && (
+                        <div className="card-details border card-padding mb-5">
+                            <h4 className="projectHeading mb-2">Progress Pulse</h4>
+                            <h5>Frontend :- </h5>
+                            <p className="para"><span className="para-color">Browser Routing:</span> Implemented client-side routing, allowing users to navigate different sections of the application without requiring full page reloads.</p>
+                            <p className="para"><span className="para-color"> Local Storage for Token Management:</span> JWT tokens are stored in the client-side local storage, ensuring persistent user authentication between sessions.</p>
+                            <p className="para"><span className="para-color">Responsive Dashboard for Multiusers:</span> Application features a responsive dashboard that adapts to different screen sizes and is accessible to multiple users. Users can log in and access specific features based on their roles.</p>
+                            <p className="para"><span className="para-color"> Axios and JWT Decode:</span> Axios is used for making asynchronous HTTP requests to backend API. JWT decoding is used to extract user information from JWT tokens for authentication and authorization.</p>
+                            <p className="para"><span className="para-color">Component-Based Design:</span>  Structured frontend using reusable components, passing props between them to build a modular and maintainable codebase.</p>
+                            <h5>Backend :- </h5>
+                            <p className="para"><span className="para-color">Three-Layer Architecture:</span> Structured Node.js backend using a three-layer architecture, which typically consists of the presentation layer, business logic layer, and data access layer. This helps in maintaining a clean and organized codebase.</p>
+                            <p className="para"><span className="para-color">Middleware for Authentication:</span> Implemented middleware functions for user authentication, ensuring that only authorized users can access certain parts of your application.</p>
+                            <p className="para"><span className="para-color">Authentication by Session and JWT Token Management:</span>  Provided two methods for user authentication: session-based authentication and JWT token-based authentication. This gives users flexibility in how they log in and access the application.</p>
+                            <p className="para"><span className="para-color">Ethereal Email for Forgot Password Functionality:</span> Integrated Ethereal email for the "forgot password" functionality, allowing users to reset their passwords securely.</p>
+                            <p className="para"><span className="para-color">Role-Based Functionality:</span>  Depending on a user's role, they have access to different functionalities within the application. This role-based access control enhances security and ensures that users can perform tasks relevant to their roles.</p>
+                            <p className="para"><span className="para-color">Calendar Filtering:</span>  Implemented a calendar filtering feature that allows users to filter data based on dates, enhancing the user experience.</p>
+                            <p className="para"><span className="para-color">User Search:</span>   Users can search for other team members by their names, making it easy to find and collaborate with colleagues.</p>
+                            <p className="para"><span className="para-color">CRUD Operations (Create, Read, Update, Delete):</span>  Provided functionality for adding, updating, and deleting team members. This allows for efficient management of user data within the application.</p>
+                            <p className="para"><span className="para-color"> RESTful APIs:</span> Backend exposes RESTful APIs that allow for the retrieval and manipulation of data, enhancing the interactivity of application.</p>
+                            <p className="para"><span className="para-color"> Transaction Handling:</span> Used database transactions to maintain data consistency, ensuring that multiple database operations either succeed together or fail together.</p>
+                            <p className="para"><span className="para-color"> Nodemailer for Sending Messages:</span> Integrated the Nodemailer module to send messages via email, facilitating communication within the application.</p>
+                            <h5>Database Design :- </h5>
+                            <p className="para"><span className="para-color"> MySQL Database:</span>  Designed a MySQL database that uses mapping, foreign keys, and primary keys for efficient data storage and retrieval.</p>
+                            <p className="para"><span className="para-color"> Schema with Multiple Tables: </span>Database schema includes multiple tables with well-defined data types, relationships, and constraints, ensuring data integrity and organization.</p>
+                            <h6 className="projectHeading border bg-color">Overall, "Progress Pulse" project showcases a robust and well-structured application with a range of features and technologies, making it a valuable tool for company collaboration and team management. The combination of React.js, Node.js, Express.js, and MySQL provides a powerful foundation for application functionality and user experience.</h6>
+                        </div>
+                    )}
+
+                    {todo && (
+                        <div className="card-details border card-padding mb-5">
+                            <h4 className="projectHeading mb-2">Todo Application</h4>
+                            <h5>Frontend :- </h5>
+                            <p className="para"><span className="para-color">Responsive Dashboard:</span>
+                                The frontend features a responsive dashboard that adapts to different screen sizes, ensuring a consistent user experience across devices.
+                            </p>
+                            <p className="para"><span className="para-color">HTML, CSS, and Bootstrap:</span>
+                                Utilized HTML and CSS, along with Bootstrap, to create an aesthetically pleasing and user-friendly interface.
+                            </p>
+                            <h5>Backend :</h5>
+                            <p className="para"><span className="para-color">  User Authentication:</span>
+                                Implemented user authentication using both cookies and sessions to securely manage user sessions.
+                                Google authentication is also supported, allowing users to log in with their Google accounts.
+                            </p>
+                            <p className="para"><span className="para-color"> Forgot Password Functionality:</span>
+                                Integrated Ethereal email and Nodemailer to enable users to reset their passwords when they forget them, enhancing security and user convenience.
+                            </p>
+                            <p className="para"><span className="para-color">Task Management:</span>
+                                Users can perform various task management actions, such as creating, updating, and deleting tasks.
+                                Tasks can be searched, paginated, and filtered by priority and status, providing a streamlined task management experience.
+                            </p>
+                            <h5>Database :</h5>
+                            <p className="para"><span className="para-color"> MongoDB Database:</span>
+                                Chosen MongoDB as your database system for storing task and user data.
+                            </p>
+                            <p className="para"><span className="para-color"> Schema Design:</span>
+                                Designed a database schema that enforces proper constraints, relationships, and data types to maintain data integrity and organization.
+                            </p>
+                            <h6 className="projectHeading border bg-color">Application supports multiple users, allowing each user to have their own set of tasks.
+                                Administrators have the ability to assign tasks to specific users and view all tasks, including the tasks of other users.
+                                Admins can also delete user accounts as needed, which is essential for user management.</h6>
+                        </div>
+                    )}
                 </div>
             </section>
         </>
