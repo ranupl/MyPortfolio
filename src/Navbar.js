@@ -52,7 +52,7 @@ const Navbar = () => {
                         </div>
                         <nav id="navbar" class="nav-menu navbar">
                             <ul>
-                                <li><NavLink to="/" className="nav-link  active"><FontAwesomeIcon icon={faHouse} />&nbsp;&nbsp;<span>Home</span></NavLink></li>
+                                <li><NavLink to="/portfolio/" className="nav-link  active"><FontAwesomeIcon icon={faHouse} />&nbsp;&nbsp;<span>Home</span></NavLink></li>
                                 <li><NavLink to="/about" className="nav-link"><FontAwesomeIcon icon={faAddressCard} />&nbsp;&nbsp;<span>About</span></NavLink></li>
                                 <li><a href="https://drive.google.com/file/d/18wEZAwgopzbGR1UWB4G5WvVkbSyEZkj4/view?usp=drive_link" className="nav-link" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faFile} />&nbsp;&nbsp;<span>Resume</span></a></li>
                                 <li><NavLink to="/skills" className="nav-link"><FontAwesomeIcon icon={faChartSimple} />&nbsp;&nbsp;<span>Skills</span></NavLink></li>

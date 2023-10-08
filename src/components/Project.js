@@ -19,7 +19,7 @@ const Project = () => {
         <>
             <section id="skills" className="skills section-bg mt-5">
                 <div className="container">
-                    <div className="d-flex justify-content-around mb-5">
+                    <div className="mb-5">
                         <div className="col">
                             <div className="text-center card-style scale-up-center" onClick={handleProgress}>
                                 <h1 className="fontHeading">Progress Pulse</h1>

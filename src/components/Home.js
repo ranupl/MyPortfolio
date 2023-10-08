@@ -9,8 +9,8 @@ const Home = () => {
         <>
             <section id="hero" className="d-flex flex-column justify-content-center align-items-center">
                 <div className="hero-container aos-init aos-animate text-pop-up-top" data-aos="fade-in">
-                    <h1>Shanu Panchal</h1>
-                    <p>I'm <span className="typed" data-typed-items="Designer, Developer, Freelancer, Photographer">Developer</span><span className="typed-cursor typed-cursor--blink" aria-hidden="true">|</span></p>
+                    <h1 className="text-center">Shanu Panchal</h1>
+                    <p className="text-center"> I'm <span className="typed" data-typed-items="Designer, Developer, Freelancer, Photographer">Developer</span><span className="typed-cursor typed-cursor--blink" aria-hidden="true">|</span></p>
                 </div>
             </section>
             <About />
