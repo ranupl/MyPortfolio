@@ -25,16 +25,15 @@ const About = () => {
                             <div className="row">
                                 <div className="col-lg-6 tracking-in-expand">
                                     <ul>
-                                        <li><i className="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+91 8088566151</span></li>
                                         <li><i className="bi bi-chevron-right"></i> <strong>City:</strong> <span>Bangalore, India</span></li>
                                         <li><i className="bi bi-chevron-right"></i> <strong>Linkedin:</strong> <span><a href="https://www.linkedin.com/in/shanupl/">linkedin/shanupl</a></span></li>
+                                        <li><i className="bi bi-chevron-right"></i> <strong>Github:</strong> <span><a href="https://github.com/ranupl">github/shanupl</a></span></li>
                                     </ul>
                                 </div>
                                 <div className="col-lg-6 tracking-in-expand">
                                     <ul>
                                         <li><i className="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Bechelor</span></li>
                                         <li><i className="bi bi-chevron-right"></i> <strong>Email:</strong> <span>ranupl542011@gmail.com</span></li>
-                                        <li><i className="bi bi-chevron-right"></i> <strong>Github:</strong> <span><a href="https://github.com/ranupl">github/shanupl</a></span></li>
                                     </ul>
                                 </div>
                                 <p>I honed my coding abilities with continuous learning proccess by working on various projects that have equipped me with a practical understanding of software development principles.</p>
