@@ -46,7 +46,7 @@ const Navbar = () => {
                             <img src={profile} alt="" className="img-fluid rounded-circle"/>
                             <h1 className="text-white"><a href="index.html">Shanu Panchal</a></h1>
                             <div className="social-links mt-3 text-center">
-                                <a href="#" className="google-plus"><FontAwesomeIcon icon={faEnvelope} /></a>
+                                <a href="mailto:ranupl542011@gmail.com" className="google-plus"><FontAwesomeIcon icon={faEnvelope} /></a>
                                 <a href="https://www.linkedin.com/in/shanupl/" className="linkedin"><FontAwesomeIcon icon={faLinkedinIn} /></a>
                             </div>
                         </div>

@@ -1,16 +1,25 @@
 import React from "react";
-import profile from "../images/profile.png";
+import { Typewriter } from "react-simple-typewriter";
 import Skills from "./Skills";
 import Project from "./Project";
 import About from "./About";
 
-const Home = () => {    
+const Home = () => {
     return (
         <>
             <section id="hero" className="d-flex flex-column justify-content-center align-items-center">
-                <div className="hero-container aos-init aos-animate text-pop-up-top" data-aos="fade-in">
+                <div className="hero-container text-pop-up-top" data-aos="fade-in">
                     <h1 className="text-center">Shanu Panchal</h1>
-                    <p className="text-center"> I'm <span className="typed" data-typed-items="Designer, Developer, Freelancer, Photographer">Developer</span><span className="typed-cursor typed-cursor--blink" aria-hidden="true">|</span></p>
+                    <p className="text-center">I'm a {' '}
+                        <span><Typewriter
+                            words={['Developer', 'Engineer', 'Coder', 'Designer']}
+                            loop={0}
+                            cursor
+                            cursorStyle='|'
+                            typeSpeed={70}
+                            deleteSpeed={50}
+                            delaySpeed={1000} /></span>
+                    </p>
                 </div>
             </section>
             <About />

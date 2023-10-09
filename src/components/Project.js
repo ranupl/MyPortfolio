@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { useSearchParams } from "react-router-dom";
 
 const Project = () => {
     const [progress, setProgress] = useState(false);
@@ -19,13 +18,14 @@ const Project = () => {
         <>
             <section id="skills" className="skills section-bg mt-5">
                 <div className="container">
-                    <div className="mb-5">
+                    <div className="mb-5 card-show">
                         <div className="col">
                             <div className="text-center card-style scale-up-center" onClick={handleProgress}>
                                 <h1 className="fontHeading">Progress Pulse</h1>
                                 <p className="text-white font">Full Stack Application</p>
                                 <p className="text-white font">Company collaboration and team management</p>
-                                <p className="pb-5 text-white font">(Built with React.js, Node.js, and MySQL.)</p>
+                                <p className="text-white font">(Built with React.js, Node.js, and MySQL.)</p>
+                                <p className="pb-5 text-warning font">(click me)</p>
                             </div>
                         </div>
                         <div className="col">
@@ -33,7 +33,8 @@ const Project = () => {
                                 <h1 className="fontHeading">Todo Application</h1>
                                 <p className="text-white font">Full Stack Application</p>
                                 <p className="text-white font">Track and manage your tasks with ease.</p>
-                                <p className="pb-5 text-white font">(Built with HTML, CSS, Node.js, and MongoDB.)</p>
+                                <p className="text-white font">(Built with HTML, CSS, Node.js, and MongoDB.)</p>
+                                <p className="pb-5 text-warning font">(click me)</p>
                             </div>
                         </div>
                     </div>
